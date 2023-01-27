@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/produkFragment">
+
+    <fragment
+        android:id="@+id/produkFragment"
+        android:name="com.example.apptoko1589.ProdukFragment"
+        android:label="fragment_produk"
+        tools:layout="@layout/fragment_produk" />
+    <fragment
+        android:id="@+id/transaksiFragment"
+        android:name="com.example.apptoko1589.TransaksiFragment"
+        android:label="fragment_transaksi"
+        tools:layout="@layout/fragment_transaksi" />
+    <fragment
+        android:id="@+id/laporanFragment"
+        android:name="com.example.apptoko1589.LaporanFragment"
+        android:label="fragment_laporan"
+        tools:layout="@layout/fragment_laporan" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.apptoko1589.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/produkFormFragment"
+        android:name="com.example.apptoko1589.ProdukFormFragment"
+        android:label="fragment_produk_form"
+        tools:layout="@layout/fragment_produk_form" >
+        <argument
+            android:name="argsProduk"
+            app:argType="com.example.apptoko1589.response.produk.Produk"
+            app:nullable="true" />
+        <argument
+            android:name="argsStatus"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
